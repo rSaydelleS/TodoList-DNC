@@ -1,0 +1,36 @@
+@use 'src/Variables/variables' as *;
+
+.header {
+    width: 100%;
+    height: 3rem;
+    font-family: $f-poppins;
+
+        &__menu {
+            list-style: none;            
+            background-color: $bg-color;
+            padding-left: 4rem;
+            padding-top: 1.6rem;
+            text-align: justify;
+
+        }
+        li {
+            background-color: $bg-color; 
+            display: inline-block;
+            color: $color;
+            font-size: $f-size;
+            font-weight: bold;
+        }
+
+        &__white {
+            margin-left: 3rem;
+            margin-bottom: 0 !important;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            text-align: center;
+            color: #0C70F2 !important;
+            background-color: white !important;
+            width: 140px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+}

@@ -1,0 +1,69 @@
+@use "src/Variables/variables" as *;
+
+.tasks {
+    font-family: $f-ralaway;
+    color: $color;
+    width: 600px;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    margin-top: 8rem;
+
+        &__info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            border-bottom: 4px solid  white;
+            padding-bottom: 1.5rem;
+        }
+        li {
+            display: inline;
+            list-style: none;
+            font-size: 30px;
+            font-weight: bold;
+            padding-bottom: 40px;
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding-top: 1.5rem;
+                ul li {
+                    display: flex;
+                    justify-content: space-around;
+            }
+        }
+        &__open {
+            margin-left: -50px;
+            margin-right: 160px;
+            width: 20px;
+        }
+        
+        span {
+            padding-right: 30px;
+        }
+        button {
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        input {
+            border: none;
+            color: $color;
+            font-size: 18px;
+            font-weight: 400;
+        }
+        
+}
+
+
+.hideDelete {
+    display: none;
+    position: absolute !important;
+    width: 100vw !important;
+    height: 30vw !important;
+    z-index: 1000;
+}

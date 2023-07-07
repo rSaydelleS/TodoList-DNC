@@ -1,0 +1,25 @@
+@use "src/Variables/variables" as *;
+
+.add {
+    &__form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    &__todo {
+        margin-left: 4.5rem;
+    }
+    &__item {
+        margin-left: -25px;
+    }
+    &__open {
+        margin-left: -52px;
+    }
+    &__confirm {
+        padding-right: 10px;
+    }
+    span {
+        margin-right: 1rem;
+    }
+}
+
