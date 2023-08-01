@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Delete from '../../View/Delete/Delete';
 import Rename from '../../View/Rename/Rename'
 import './index.scss';
+
 const List = () => {
 
     const [displayStyle, setDisplayStyle] = useState('');
