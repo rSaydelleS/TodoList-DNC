@@ -23,10 +23,6 @@
         padding-right: 10px;
     }
 
-    span {
-        margin-right: 1rem;
-    }
-
     &__delete {
         margin-top: 50px;
         padding: 10px;
@@ -68,6 +64,12 @@
             border-radius: 10px;
             cursor: pointer;
         }
+    }
+
+    &__select {
+        color: white;
+        width: 60px;
+        padding: 1px;
     }
 }
 

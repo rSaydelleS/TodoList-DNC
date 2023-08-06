@@ -23,14 +23,16 @@ const handleSubmit = (event) => {
     setDispStyle(NewDisplay);
     }
 
-    const deleteTask = () => {
+    const deleteAllTask = () => {
         const deleted = [...meuArray];
-        deleted.splice(meuArray);
+        deleted.splice('');
         setMeuArray(deleted);
         const NewDisplay =  dispStyle == 'none' ? 'block' : 'none';
         setDispStyle(NewDisplay);
-    }   
+    }
     
+    const [color, setColor] = useState('white')
+
 return <>   
     <div className='add'>
         <div>
@@ -61,7 +63,7 @@ return <>
             <h1>Tem certeza que deseja excluir TODAS as tarefas?</h1>
             <span>
                 <button onClick={Chagedisplay}>Não</button>
-                <button onClick={deleteTask}>Sim</button>
+                <button onClick={deleteAllTask}>Sim</button>
             </span>
         </div> 
     </div>
