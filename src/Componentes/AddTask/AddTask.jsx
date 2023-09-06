@@ -6,6 +6,7 @@ const AddTask = ({ DisplayOff }) => {
 
 const [inputValue, setInputValue] = useState('');
 const [meuArray, setMeuArray] = useState([]);
+const [deleted, setDeleted] = useState([]);
 const handleInputChange = (event) => {
     setInputValue(event.target.value);
     };
@@ -31,18 +32,23 @@ const handleSubmit = (event) => {
         setDispStyle(NewDisplay);
     }
     
-    const [color, setColor] = useState('white')
+    const deleteTask = (index,item) => {
+        meuArray.indexOf(item);
+        setDeleted(meuArray.splice(index, 1));
+        setMeuArray([...meuArray]);
+        
+    }
 
 return <>   
     <div className='add'>
         <div>
             {meuArray.map((item, index) => (
                 <li key={index}>
-                    <input className='add__todo' defaultValue={item}  />
+                    <input value={item}></input>
                     <input className='tasks__open' type='checkbox'></input>
-                    <span>
+                    <span className='add__check'>
                         <button onClick={DisplayOff}><img src='rename.png' /></button>
-                        <button onClick={DisplayOff}><img src='delete.png' /></button>
+                        <button onClick={()=> deleteTask(index, item)}><img src='delete.png' /></button>
                     </span>
                 </li>
             ))}
@@ -65,7 +71,13 @@ return <>
                 <button onClick={Chagedisplay}>Não</button>
                 <button onClick={deleteAllTask}>Sim</button>
             </span>
-        </div> 
+        </div>
+        <div>
+            <h2>Tarefas excluídas</h2>
+            <ul>
+            
+        </ul>   
+        </div>
     </div>
     
 </>;

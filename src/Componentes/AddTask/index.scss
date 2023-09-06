@@ -7,6 +7,16 @@
         justify-content: space-around;
     }
 
+    &__task{
+        
+        margin-right: 50px;
+    }
+
+    &__check {
+        width: 68px;
+        margin-left: 160px;
+    }
+
     &__todo {
         margin-left: 4.5rem;
     }
@@ -64,12 +74,6 @@
             border-radius: 10px;
             cursor: pointer;
         }
-    }
-
-    &__select {
-        color: white;
-        width: 60px;
-        padding: 1px;
     }
 }
 

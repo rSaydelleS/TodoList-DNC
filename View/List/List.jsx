@@ -9,7 +9,7 @@ import './index.scss';
 
 const List = () => {
 
-    const [displayStyle, setDisplayStyle] = useState('');
+    const [displayStyle, setDisplayStyle] = useState('none');
     const DeleteChange = () => {
     const NewShowDisplay =  displayStyle == 'none' ? 'block' : 'none';
     setDisplayStyle(NewShowDisplay);
@@ -36,9 +36,7 @@ const List = () => {
                 </ul>
             </div>
             <div className='tasks__list'>
-                <ul>
-                    <AddTask DisplayOff={DeleteChange}/>
-                </ul>
+                <AddTask DisplayOff={DeleteChange}/>
             </div>
         </div>
     </>;
