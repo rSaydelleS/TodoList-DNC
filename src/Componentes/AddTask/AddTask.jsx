@@ -24,30 +24,29 @@ const handleSubmit = (event) => {
     setDispStyle(NewDisplay);
     }
 
+    const deleteTask = (index,item) => {
+        meuArray.indexOf(item);
+        setDeleted(meuArray.splice(index, 1));
+        console.log(deleted);
+        
+    }
+
     const deleteAllTask = () => {
-        const deleted = [...meuArray];
-        deleted.splice('');
-        setMeuArray(deleted);
+        const deleteds = [...meuArray];
+        deleteds.splice('');
+        setMeuArray(deleteds);
         const NewDisplay =  dispStyle == 'none' ? 'block' : 'none';
         setDispStyle(NewDisplay);
     }
     
-    const deleteTask = (index,item) => {
-        meuArray.indexOf(item);
-        setDeleted(meuArray.splice(index, 1));
-        setMeuArray([...meuArray]);
-        
-    }
-
 return <>   
     <div className='add'>
         <div>
             {meuArray.map((item, index) => (
                 <li key={index}>
-                    <input value={item}></input>
+                    <input value={item}/>
                     <input className='tasks__open' type='checkbox'></input>
                     <span className='add__check'>
-                        <button onClick={DisplayOff}><img src='rename.png' /></button>
                         <button onClick={()=> deleteTask(index, item)}><img src='delete.png' /></button>
                     </span>
                 </li>
@@ -71,12 +70,6 @@ return <>
                 <button onClick={Chagedisplay}>Não</button>
                 <button onClick={deleteAllTask}>Sim</button>
             </span>
-        </div>
-        <div>
-            <h2>Tarefas excluídas</h2>
-            <ul>
-            
-        </ul>   
         </div>
     </div>
     

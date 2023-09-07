@@ -1,6 +1,8 @@
 @use "src/Variables/variables" as *;
 
 .add {
+    position: relative;
+
     &__form {
         display: flex;
         flex-direction: row;
@@ -26,7 +28,7 @@
     }
     
     &__open {
-        margin-left: -52px;
+        padding-right: 100px;
     }
 
     &__confirm {
@@ -48,6 +50,10 @@
     }
 
     &__deleteAsk{
+        position: absolute;
+        top: -50px;
+        z-index: 1;
+
         color: black;
         display: flex;
         align-items: center;
@@ -55,6 +61,11 @@
         flex-direction: column;
         justify-content: space-around;
 
+        border: 4px rgba(39, 38, 38, 0.814) inset;
+        border-radius: 10px;
+
+        padding: 20px 10px;
+        
         h1{
             padding-bottom: 3rem;
             font-size: 35px;
